@@ -5,7 +5,8 @@
 package it.unipd.mtss;
 
 public class RomanPrinter {
-// ASCII art della lettera I
+
+    // ASCII art della lettera I
     private static final String[] ASCII_I = {
         "  _____  ",
         " |_   _| ",
@@ -15,10 +16,21 @@ public class RomanPrinter {
         " |_____| "
     };
 
+    // ASCII art della lettera V
+    private static final String[] ASCII_V = {
+        "__        __",
+        "\\ \\      / /",
+        " \\ \\    / / ",
+        "  \\ \\  / /  ",
+        "   \\ \\/ /   ",
+        "    \\__/    "
+    };
+
     public static String print(int n) {
         return printAsciiArt(IntegerToRoman.convert(n));
     }
-// Costruisec la stringa finale affiancando le lettere riga x riga
+
+    // Costruisec la stringa finale affiancando le lettere riga x riga
     private static String printAsciiArt(String romanNumber) {
         int rows = 6;
         String[] lines = new String[rows];
@@ -43,6 +55,7 @@ public class RomanPrinter {
     private static String[] getAsciiArt(char c) {
         switch (c) {
             case 'I': return ASCII_I;
+            case 'V': return ASCII_V;
             default: throw new IllegalArgumentException(
                 "Carattere non supportato: " + c);
         }

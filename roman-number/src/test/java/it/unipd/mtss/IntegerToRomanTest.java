@@ -23,6 +23,16 @@ public class IntegerToRomanTest {
     public void testConvert_NumberThree_ReturnsIII() {
         assertEquals("III", IntegerToRoman.convert(3));
     }
+    
+     @Test
+    public void testConvert_NumberFour_ReturnsIV() {
+        assertEquals("IV", IntegerToRoman.convert(4));
+    }
+
+    @Test
+    public void testConvert_NumberFive_ReturnsV() {
+        assertEquals("V", IntegerToRoman.convert(5));
+    }
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testConvert_NumberZero_ThrowsException() {
