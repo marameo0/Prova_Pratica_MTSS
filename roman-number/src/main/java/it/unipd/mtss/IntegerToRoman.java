@@ -6,8 +6,28 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
 
-    public static String convert(int number) {
-        // TODO
-        return null;
+    private static final int[] VALUES = {10, 9, 5, 4, 1};
+
+    private static final String[] SYMBOLS = {"X", "IX", "V", "IV", "I"};
+
+    // Gestisce il limite dei numeri
+    public static String convert(int n) {
+        if (n < 1 || n > 10) {
+            throw new IllegalArgumentException(
+                "Numero fuori range (1-10)");
+        }
+
+        StringBuilder result = new StringBuilder();
+        int remaining = n;
+
+        for (int i = 0; i < VALUES.length; i++) {
+            while (remaining >= VALUES[i]) {
+                result.append(SYMBOLS[i]);
+                remaining -= VALUES[i];
+            }
+        }
+
+        return result.toString();
     }
-}
+}  
+   
