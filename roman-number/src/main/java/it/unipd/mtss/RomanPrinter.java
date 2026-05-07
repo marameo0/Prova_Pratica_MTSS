@@ -52,6 +52,15 @@ public class RomanPrinter {
         "| |____  ",
         " \\_____| "
     };
+    // ASCII art della lettera D (500)
+    private static final String[] ASCII_D = {
+        " _____   ",
+        "|  __ \\  ",
+        "| |  | | ",
+        "| |  | | ",
+        "| |__| | ",
+        "|_____/  "
+    };
 
     public static String print(int n) {
         return printAsciiArt(IntegerToRoman.convert(n));
@@ -86,6 +95,7 @@ public class RomanPrinter {
             case 'X': return ASCII_X;
             case 'L': return ASCII_L;
             case 'C': return ASCII_C;
+            case 'D': return ASCII_D;
             default: throw new IllegalArgumentException(
                 "Carattere non supportato: " + c);
         }

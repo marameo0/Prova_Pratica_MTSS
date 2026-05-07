@@ -167,6 +167,45 @@ public class RomanPrinterTest {
 
         assertEquals(expected, RomanPrinter.print(100));
     }
+
+    @Test
+    public void testPrint_NumberThreeHundredFortySix_ReturnsAsciiCCCXLVI() {
+        String expected =
+            "  _____    _____    _____  __   __ _       __        __  _____  \n" +
+            " / ____|  / ____|  / ____| \\ \\ / /| |      \\ \\      / / |_   _| \n" +
+            "| |      | |      | |       \\ V / | |       \\ \\    / /    | |   \n" +
+            "| |      | |      | |        > <  | |        \\ \\  / /     | |   \n" +
+            "| |____  | |____  | |____   / . \\ | |____     \\ \\/ /     _| |_  \n" +
+            " \\_____|  \\_____|  \\_____| /_/ \\_\\|______|     \\__/     |_____| \n";
+
+        assertEquals(expected, RomanPrinter.print(346));
+    }
+
+    @Test
+    public void testPrint_NumberFourHundred_ReturnsAsciiCD() {
+        String expected =
+            "  _____   _____   \n" +
+            " / ____| |  __ \\  \n" +
+            "| |      | |  | | \n" +
+            "| |      | |  | | \n" +
+            "| |____  | |__| | \n" +
+            " \\_____| |_____/  \n";
+
+        assertEquals(expected, RomanPrinter.print(400));
+    }
+
+    @Test
+    public void testPrint_NumberFiveHundred_ReturnsAsciiD() {
+        String expected =
+            " _____   \n" +
+            "|  __ \\  \n" +
+            "| |  | | \n" +
+            "| |  | | \n" +
+            "| |__| | \n" +
+            "|_____/  \n";
+
+        assertEquals(expected, RomanPrinter.print(500));
+    }
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testPrint_NumberZero_ThrowsException() {
@@ -174,8 +213,8 @@ public class RomanPrinterTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testPrint_NumberFiftyOne_ThrowsException() {
-        RomanPrinter.print(103);
+    public void testPrint_NumberFiveHundredFive_ThrowsException() {
+        RomanPrinter.print(505);
     }
 
     @Test(expected = IllegalArgumentException.class)
