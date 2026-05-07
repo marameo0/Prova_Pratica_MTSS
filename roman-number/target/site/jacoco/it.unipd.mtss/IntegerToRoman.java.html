@@ -6,29 +6,30 @@ package it.unipd.mtss;
 
 <span class="nc" id="L7">public class IntegerToRoman {</span>
 
-<span class="fc" id="L9">    private static final int[] VALUES = {100, 90, 50, 40, 10, 9, 5, 4, 1};</span>
+<span class="fc" id="L9">    private static final int[] VALUES = {500, 400, 100, 90, </span>
+                                        50, 40, 10, 9, 5, 4, 1};
 
-<span class="fc" id="L11">    private static final String[] SYMBOLS = {&quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, </span>
-                                            &quot;IV&quot;, &quot;I&quot;};
+<span class="fc" id="L12">    private static final String[] SYMBOLS = {&quot;D&quot;, &quot;CD&quot;,&quot;C&quot;, &quot;XC&quot;, &quot;L&quot;,</span>
+                                        &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};
 
     // Gestisce il limite dei numeri
     public static String convert(int n) {
-<span class="fc bfc" id="L16" title="All 4 branches covered.">        if (n &lt; 1 || n &gt; 100) {</span>
-<span class="fc" id="L17">            throw new IllegalArgumentException(</span>
-                &quot;Numero fuori range (1-50)&quot;);
+<span class="fc bfc" id="L17" title="All 4 branches covered.">        if (n &lt; 1 || n &gt; 500) {</span>
+<span class="fc" id="L18">            throw new IllegalArgumentException(</span>
+                &quot;Numero fuori range (1-500)&quot;);
         }
 
-<span class="fc" id="L21">        StringBuilder result = new StringBuilder();</span>
-<span class="fc" id="L22">        int remaining = n;</span>
+<span class="fc" id="L22">        StringBuilder result = new StringBuilder();</span>
+<span class="fc" id="L23">        int remaining = n;</span>
 
-<span class="fc bfc" id="L24" title="All 2 branches covered.">        for (int i = 0; i &lt; VALUES.length; i++) {</span>
-<span class="fc bfc" id="L25" title="All 2 branches covered.">            while (remaining &gt;= VALUES[i]) {</span>
-<span class="fc" id="L26">                result.append(SYMBOLS[i]);</span>
-<span class="fc" id="L27">                remaining -= VALUES[i];</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for (int i = 0; i &lt; VALUES.length; i++) {</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            while (remaining &gt;= VALUES[i]) {</span>
+<span class="fc" id="L27">                result.append(SYMBOLS[i]);</span>
+<span class="fc" id="L28">                remaining -= VALUES[i];</span>
             }
         }
 
-<span class="fc" id="L31">        return result.toString();</span>
+<span class="fc" id="L32">        return result.toString();</span>
     }
 }  
    
