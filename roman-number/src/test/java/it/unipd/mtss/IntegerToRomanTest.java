@@ -91,7 +91,7 @@ public class IntegerToRomanTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testConvert_NumberFiftyOne_ThrowsException() {
+    public void testConvert_OneHundredThree_ThrowsException() {
         IntegerToRoman.convert(103);
     }
 

@@ -174,7 +174,7 @@ public class RomanPrinterTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testPrint_NumberFiftyOne_ThrowsException() {
+    public void testPrint_NumberOneHundredThree_ThrowsException() {
         RomanPrinter.print(103);
     }
 

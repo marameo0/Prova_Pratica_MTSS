@@ -15,7 +15,7 @@ public class IntegerToRoman {
     public static String convert(int n) {
         if (n < 1 || n > 100) {
             throw new IllegalArgumentException(
-                "Numero fuori range (1-50)");
+                "Numero fuori range (1-100)");
         }
 
         StringBuilder result = new StringBuilder();
