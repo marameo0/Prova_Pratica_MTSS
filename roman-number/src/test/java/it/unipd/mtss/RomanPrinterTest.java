@@ -44,6 +44,30 @@ public class RomanPrinterTest {
             " |_____|  |_____|  |_____| \n";
         assertEquals(expected, RomanPrinter.print(3));
     }
+
+    @Test
+    public void testPrint_NumberFour_ReturnsAsciiIV() {
+        String expected =
+            "  _____  __        __\n" +
+            " |_   _| \\ \\      / /\n" +
+            "   | |    \\ \\    / / \n" +
+            "   | |     \\ \\  / /  \n" +
+            "  _| |_     \\ \\/ /   \n" +
+            " |_____|     \\__/    \n";
+        assertEquals(expected, RomanPrinter.print(4));
+    }
+
+    @Test
+    public void testPrint_NumberFive_ReturnsAsciiV() {
+        String expected =
+            "__        __\n" +
+            "\\ \\      / /\n" +
+            " \\ \\    / / \n" +
+            "  \\ \\  / /  \n" +
+            "   \\ \\/ /   \n" +
+            "    \\__/    \n";
+        assertEquals(expected, RomanPrinter.print(5));
+    }
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testPrint_NumberZero_ThrowsException() {
