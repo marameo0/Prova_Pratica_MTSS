@@ -62,6 +62,16 @@ public class RomanPrinter {
         "|_____/  "
     };
 
+    // ASCII art della lettera M (1000)
+    private static final String[] ASCII_M = {
+        " __  __  ",
+        "|  \\/  | ",
+        "| \\  / | ",
+        "| |\\/| | ",
+        "| |  | | ",
+        "|_|  |_| "
+    };
+
     public static String print(int n) {
         return printAsciiArt(IntegerToRoman.convert(n));
     }
@@ -96,6 +106,7 @@ public class RomanPrinter {
             case 'L': return ASCII_L;
             case 'C': return ASCII_C;
             case 'D': return ASCII_D;
+            case 'M': return ASCII_M;
             default: throw new IllegalArgumentException(
                 "Carattere non supportato: " + c);
         }

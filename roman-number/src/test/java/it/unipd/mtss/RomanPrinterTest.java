@@ -206,6 +206,46 @@ public class RomanPrinterTest {
 
         assertEquals(expected, RomanPrinter.print(500));
     }
+
+    @Test
+    public void testPrint_NumberSixHundredFortyNine_ReturnsAsciiDCXLIX() {
+        String expected =
+            " _____     _____  __   __ _         _____  __   __\n" +
+            "|  __ \\   / ____| \\ \\ / /| |       |_   _| \\ \\ / /\n" +
+            "| |  | | | |       \\ V / | |         | |    \\ V / \n" +
+            "| |  | | | |        > <  | |         | |     > <  \n" +
+            "| |__| | | |____   / . \\ | |____    _| |_   / . \\ \n" +
+            "|_____/   \\_____| /_/ \\_\\|______|  |_____| /_/ \\_\\\n";
+
+        assertEquals(expected, RomanPrinter.print(649));
+    }
+
+    @Test
+    public void testPrint_NumberNineHundred_ReturnsAsciiCM() {
+        String expected =
+            "  _____   __  __  \n" +
+            " / ____| |  \\/  | \n" +
+            "| |      | \\  / | \n" +
+            "| |      | |\\/| | \n" +
+            "| |____  | |  | | \n" +
+            " \\_____| |_|  |_| \n";
+
+        assertEquals(expected, RomanPrinter.print(900));
+    }
+
+    @Test
+    public void testPrint_NumberOneThousand_ReturnsAsciiM() {
+        String expected =
+            " __  __  \n" +
+            "|  \\/  | \n" +
+            "| \\  / | \n" +
+            "| |\\/| | \n" +
+            "| |  | | \n" +
+            "|_|  |_| \n";
+
+        assertEquals(expected, RomanPrinter.print(1000));
+    }
+
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testPrint_NumberZero_ThrowsException() {
@@ -213,8 +253,8 @@ public class RomanPrinterTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testPrint_NumberFiveHundredFive_ThrowsException() {
-        RomanPrinter.print(505);
+    public void testPrint_NumberOneThousandSeven_ThrowsException() {
+        RomanPrinter.print(1007);
     }
 
     @Test(expected = IllegalArgumentException.class)
