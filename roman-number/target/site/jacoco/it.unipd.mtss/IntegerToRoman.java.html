@@ -6,15 +6,15 @@ package it.unipd.mtss;
 
 <span class="nc" id="L7">public class IntegerToRoman {</span>
 
-<span class="fc" id="L9">    private static final int[] VALUES = {5, 4, 1};</span>
+<span class="fc" id="L9">    private static final int[] VALUES = {50, 40, 10, 9, 5, 4, 1};</span>
 
-<span class="fc" id="L11">    private static final String[] SYMBOLS = {&quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};</span>
+<span class="fc" id="L11">    private static final String[] SYMBOLS = {&quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};</span>
 
-    // Gestisce il limete dei numeri
+    // Gestisce il limite dei numeri
     public static String convert(int n) {
-<span class="fc bfc" id="L15" title="All 4 branches covered.">        if (n &lt; 1 || n &gt; 6) {</span>
+<span class="fc bfc" id="L15" title="All 4 branches covered.">        if (n &lt; 1 || n &gt; 50) {</span>
 <span class="fc" id="L16">            throw new IllegalArgumentException(</span>
-                &quot;Numero fuori range (1-6)&quot;);
+                &quot;Numero fuori range (1-50)&quot;);
         }
 
 <span class="fc" id="L20">        StringBuilder result = new StringBuilder();</span>
@@ -29,5 +29,6 @@ package it.unipd.mtss;
 
 <span class="fc" id="L30">        return result.toString();</span>
     }
-}
+}  
+   
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

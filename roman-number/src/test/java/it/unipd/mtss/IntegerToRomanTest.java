@@ -43,6 +43,32 @@ public class IntegerToRomanTest {
     public void testConvert_NumberTen_ReturnsX() {
         assertEquals("X", IntegerToRoman.convert(10));
     }
+
+    @Test
+    public void testConvert_NumberFourteen_ReturnsXIV() {
+        assertEquals("XIV", IntegerToRoman.convert(14));
+    }
+
+    @Test
+    public void testConvert_NumberNineteen_ReturnsXIX() {
+        assertEquals("XIX", IntegerToRoman.convert(19));
+    }
+
+    @Test
+    public void testConvert_NumberTwenty_ReturnsXX() {
+        assertEquals("XX", IntegerToRoman.convert(20));
+    }
+
+    @Test
+    public void testConvert_NumberForty_ReturnsXL() {
+        assertEquals("XL", IntegerToRoman.convert(40));
+    }
+
+    @Test
+    public void testConvert_NumberFifty_ReturnsL() {
+        assertEquals("L", IntegerToRoman.convert(50));
+    }
+    
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testConvert_NumberZero_ThrowsException() {
@@ -50,8 +76,8 @@ public class IntegerToRomanTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testConvert_NumberEleven_ThrowsException() {
-        IntegerToRoman.convert(11);
+    public void testConvert_NumberFiftyOne_ThrowsException() {
+        IntegerToRoman.convert(51);
     }
 
     @Test(expected = IllegalArgumentException.class)
