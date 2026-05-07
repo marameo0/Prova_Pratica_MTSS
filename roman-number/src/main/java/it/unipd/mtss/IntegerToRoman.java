@@ -5,6 +5,7 @@
 package it.unipd.mtss;
 
 public class IntegerToRoman {
+    //Gestisce il limite dei numeri 
     public static String convert(int n) {
         if (n < 1 || n > 3) {
             throw new IllegalArgumentException("Numero fuori range (1-3)");
