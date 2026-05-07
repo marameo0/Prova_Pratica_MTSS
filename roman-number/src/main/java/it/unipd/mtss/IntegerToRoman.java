@@ -6,15 +6,15 @@ package it.unipd.mtss;
 
 public class IntegerToRoman {
 
-    private static final int[] VALUES = {5, 4, 1};
+    private static final int[] VALUES = {10, 9, 5, 4, 1};
 
-    private static final String[] SYMBOLS = {"V", "IV", "I"};
+    private static final String[] SYMBOLS = {"X", "IX", "V", "IV", "I"};
 
-    // Gestisce il limete dei numeri
+    // Gestisce il limite dei numeri
     public static String convert(int n) {
-        if (n < 1 || n > 6) {
+        if (n < 1 || n > 10) {
             throw new IllegalArgumentException(
-                "Numero fuori range (1-6)");
+                "Numero fuori range (1-10)");
         }
 
         StringBuilder result = new StringBuilder();
@@ -29,4 +29,5 @@ public class IntegerToRoman {
 
         return result.toString();
     }
-}
+}  
+   

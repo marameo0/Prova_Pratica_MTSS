@@ -68,6 +68,29 @@ public class RomanPrinterTest {
             "    \\__/    \n";
         assertEquals(expected, RomanPrinter.print(5));
     }
+    @Test
+    public void testPrint_NumberNine_ReturnsAsciiIX() {
+        String expected =
+            "  _____  __   __\n" +
+            " |_   _| \\ \\ / /\n" +
+            "   | |    \\ V / \n" +
+            "   | |     > <  \n" +
+            "  _| |_   / . \\ \n" +
+            " |_____| /_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(9));
+    }
+
+    @Test
+    public void testPrint_NumberTen_ReturnsAsciiX() {
+        String expected =
+            "__   __\n" +
+            "\\ \\ / /\n" +
+            " \\ V / \n" +
+            "  > <  \n" +
+            " / . \\ \n" +
+            "/_/ \\_\\\n";
+        assertEquals(expected, RomanPrinter.print(10));
+    }
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testPrint_NumberZero_ThrowsException() {

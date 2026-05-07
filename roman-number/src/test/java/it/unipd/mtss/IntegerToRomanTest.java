@@ -23,7 +23,7 @@ public class IntegerToRomanTest {
     public void testConvert_NumberThree_ReturnsIII() {
         assertEquals("III", IntegerToRoman.convert(3));
     }
-    
+
      @Test
     public void testConvert_NumberFour_ReturnsIV() {
         assertEquals("IV", IntegerToRoman.convert(4));
@@ -32,6 +32,16 @@ public class IntegerToRomanTest {
     @Test
     public void testConvert_NumberFive_ReturnsV() {
         assertEquals("V", IntegerToRoman.convert(5));
+    }
+    
+    @Test
+    public void testConvert_NumberNine_ReturnsIX() {
+        assertEquals("IX", IntegerToRoman.convert(9));
+    }
+
+    @Test
+    public void testConvert_NumberTen_ReturnsX() {
+        assertEquals("X", IntegerToRoman.convert(10));
     }
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
