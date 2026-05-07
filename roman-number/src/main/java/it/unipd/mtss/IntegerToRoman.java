@@ -8,8 +8,8 @@ public class IntegerToRoman {
 
     private static final int[] VALUES = {100, 90, 50, 40, 10, 9, 5, 4, 1};
 
-    private static final String[] SYMBOLS = {"C", "XC", "L", "XL", "X", "IX", "V", 
-                                            "IV", "I"};
+    private static final String[] SYMBOLS = {"C", "XC", "L", "XL", "X", 
+                                                "IX", "V", "IV", "I"};
 
     // Gestisce il limite dei numeri
     public static String convert(int n) {
