@@ -43,7 +43,8 @@ public class RomanPrinter {
     private static String[] getAsciiArt(char c) {
         switch (c) {
             case 'I': return ASCII_I;
-            default: throw new IllegalArgumentException("Carattere non supportato: " + c);
+            default: throw new IllegalArgumentException(
+                "Carattere non supportato: " + c);
         }
     }
 }
