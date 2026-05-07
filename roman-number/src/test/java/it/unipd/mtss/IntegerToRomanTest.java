@@ -33,7 +33,7 @@ public class IntegerToRomanTest {
     public void testConvert_NumberFive_ReturnsV() {
         assertEquals("V", IntegerToRoman.convert(5));
     }
-    
+
     @Test
     public void testConvert_NumberNine_ReturnsIX() {
         assertEquals("IX", IntegerToRoman.convert(9));
@@ -43,6 +43,77 @@ public class IntegerToRomanTest {
     public void testConvert_NumberTen_ReturnsX() {
         assertEquals("X", IntegerToRoman.convert(10));
     }
+
+    @Test
+    public void testConvert_NumberFourteen_ReturnsXIV() {
+        assertEquals("XIV", IntegerToRoman.convert(14));
+    }
+
+    @Test
+    public void testConvert_NumberNineteen_ReturnsXIX() {
+        assertEquals("XIX", IntegerToRoman.convert(19));
+    }
+
+    @Test
+    public void testConvert_NumberTwenty_ReturnsXX() {
+        assertEquals("XX", IntegerToRoman.convert(20));
+    }
+
+    @Test
+    public void testConvert_NumberForty_ReturnsXL() {
+        assertEquals("XL", IntegerToRoman.convert(40));
+    }
+
+    @Test
+    public void testConvert_NumberFifty_ReturnsL() {
+        assertEquals("L", IntegerToRoman.convert(50));
+    }
+
+    @Test
+    public void testConvert_NumberSixtyEight_ReturnsLXVIII() {
+        assertEquals("LXVIII", IntegerToRoman.convert(68));
+    }
+
+    @Test
+    public void testConvert_NumberNinety_ReturnsXC() {
+        assertEquals("XC", IntegerToRoman.convert(90));
+    }
+
+    @Test
+    public void testConvert_NumberOneHundred_ReturnsC() {
+        assertEquals("C", IntegerToRoman.convert(100));
+    }
+
+    @Test
+    public void testConvert_NumberThreeHundredFortySix_ReturnsCCCXLVI() {
+        assertEquals("CCCXLVI", IntegerToRoman.convert(346));
+    }
+
+    @Test
+    public void testConvert_NumberFourHundred_ReturnsCD() {
+        assertEquals("CD", IntegerToRoman.convert(400));
+    }
+
+    @Test
+    public void testConvert_NumberFiveHundred_ReturnsD() {
+        assertEquals("D", IntegerToRoman.convert(500));
+    }
+
+    @Test
+    public void testConvert_NumberSixHundredFortyNine_ReturnsDCXLIX() {
+        assertEquals("DCXLIX", IntegerToRoman.convert(649));
+    }
+
+    @Test
+    public void testConvert_NumberNineHundred_ReturnsCM() {
+        assertEquals("CM", IntegerToRoman.convert(900));
+    }
+
+    @Test
+    public void testConvert_NumberOneThousand_ReturnsM() {
+        assertEquals("M", IntegerToRoman.convert(1000));
+    }
+    
 //Test illegali
     @Test(expected = IllegalArgumentException.class)
     public void testConvert_NumberZero_ThrowsException() {
@@ -50,8 +121,8 @@ public class IntegerToRomanTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testConvert_NumberEleven_ThrowsException() {
-        IntegerToRoman.convert(11);
+    public void testConvert_NumberOneThousandSeven_ThrowsException() {
+        IntegerToRoman.convert(1007);
     }
 
     @Test(expected = IllegalArgumentException.class)

@@ -34,13 +34,50 @@ public class RomanPrinter {
         " / . \\ ",
         "/_/ \\_\\"
     };
-    
+    // ASCII art della lettera L (50)
+    private static final String[] ASCII_L = {
+        " _       ",
+        "| |      ",
+        "| |      ",
+        "| |      ",
+        "| |____  ",
+        "|______| "
+    };
+    // ASCII art della lettera C (100)
+    private static final String[] ASCII_C = {
+        "  _____  ",
+        " / ____| ",
+        "| |      ",
+        "| |      ",
+        "| |____  ",
+        " \\_____| "
+    };
+    // ASCII art della lettera D (500)
+    private static final String[] ASCII_D = {
+        " _____   ",
+        "|  __ \\  ",
+        "| |  | | ",
+        "| |  | | ",
+        "| |__| | ",
+        "|_____/  "
+    };
+
+    // ASCII art della lettera M (1000)
+    private static final String[] ASCII_M = {
+        " __  __  ",
+        "|  \\/  | ",
+        "| \\  / | ",
+        "| |\\/| | ",
+        "| |  | | ",
+        "|_|  |_| "
+    };
+
     public static String print(int n) {
         return printAsciiArt(IntegerToRoman.convert(n));
     }
 
-    // Costruisec la stringa finale affiancando le lettere riga x riga
-    private static String printAsciiArt(String romanNumber) {
+    // Costruisce la stringa finale affiancando le lettere riga x riga
+     private static String printAsciiArt(String romanNumber) {
         int rows = 6;
         String[] lines = new String[rows];
         for (int i = 0; i < rows; i++) {
@@ -66,6 +103,10 @@ public class RomanPrinter {
             case 'I': return ASCII_I;
             case 'V': return ASCII_V;
             case 'X': return ASCII_X;
+            case 'L': return ASCII_L;
+            case 'C': return ASCII_C;
+            case 'D': return ASCII_D;
+            case 'M': return ASCII_M;
             default: throw new IllegalArgumentException(
                 "Carattere non supportato: " + c);
         }
