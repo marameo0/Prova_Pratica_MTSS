@@ -42,6 +42,14 @@ jobs:
       - name: Analisi Statica del Codice
         run: mvn checkstyle:check
 
-      # Generazione report coverage e invio a Coveralls
-      - name: Code Coverage e Coveralls
-        run: mvn jacoco:report coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
+      # Generazione report JaCoCo
+      - name: Generazione Coverage Report
+        run: mvn jacoco:report
+
+      # Invio report a Coveralls
+      - name: Invio a Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          file: roman-number/target/site/jacoco/jacoco.xml
+          format: jacoco
